@@ -22,7 +22,7 @@ class FLNativeViewFactory: NSObject, FlutterPlatformViewFactory {
                 arguments: args,
                 binaryMessenger: messenger)
         } else {
-            let mes = "zalupa"
+            let mes = "123"
             return mes as! FlutterPlatformView
         }
     }
@@ -66,7 +66,7 @@ class FLNativeView: NSObject, FlutterPlatformView, WKNavigationDelegate {
         Task {
                    let names = ["Russian Trusted Root CA"]
                    await validator.prepareCertificates(names)}
-        let url = URL(string: "https://vk.com/")!
+        let url = URL(string: "https://securepayments.sberbank.ru/")!
                 webView.load(URLRequest(url: url))
         
         _view.addSubview(webView)

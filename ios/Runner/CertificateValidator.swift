@@ -8,12 +8,14 @@ actor CertificateValidator {
         certificates = names.compactMap(certificate(name:))
     }
     
+    //Проблема тут
     private func certificate(name: String) -> SecCertificate? {
         if let path = Bundle.main.url(forResource: name, withExtension: "der", subdirectory: "Certificates"),
            let certData = try? Data(contentsOf: path),
            let certificate = SecCertificateCreateWithData(nil, certData as CFData) {
             return certificate
         } else {
+            print("123")
             return nil
         }
 
