@@ -64,7 +64,8 @@ class FLNativeView: NSObject, FlutterPlatformView, WKNavigationDelegate {
         webView.navigationDelegate = self
 
         Task {
-                   let names = ["Russian Trusted Root CA"]
+            let names = ["Russian Trusted Root CA",
+                                    "Russian Trusted Sub CA"]
                    await validator.prepareCertificates(names)}
         let url = URL(string: "https://securepayments.sberbank.ru/")!
                 webView.load(URLRequest(url: url))

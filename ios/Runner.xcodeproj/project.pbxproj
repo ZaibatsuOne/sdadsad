@@ -15,8 +15,13 @@
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		CE35570B2ACEF53000FB9942 /* CertificateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35570A2ACEF53000FB9942 /* CertificateValidator.swift */; };
+		CE3557102ACF02D800FB9942 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9740EEB21CF90195004384FC /* Debug.xcconfig */; };
+		CE3557112ACF02D800FB9942 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */; };
+		CE3557122ACF02D800FB9942 /* Generated.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9740EEB31CF90195004384FC /* Generated.xcconfig */; };
 		CE7891C52ACEEE6E00ABE47B /* FLPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7891C42ACEEE6E00ABE47B /* FLPlugin.swift */; };
 		CE7891C72ACEEE9800ABE47B /* FLNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7891C62ACEEE9800ABE47B /* FLNativeView.swift */; };
+		CE8C913C2ACF05DD00935B2C /* Russian Trusted Root CA.der in Resources */ = {isa = PBXBuildFile; fileRef = CE8C913B2ACF05CC00935B2C /* Russian Trusted Root CA.der */; };
+		CE8C913D2ACF05DD00935B2C /* Russian Trusted Sub CA.der in Resources */ = {isa = PBXBuildFile; fileRef = CE8C913A2ACF05CC00935B2C /* Russian Trusted Sub CA.der */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +63,10 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE35570A2ACEF53000FB9942 /* CertificateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateValidator.swift; sourceTree = "<group>"; };
-		CE35570E2ACEF90C00FB9942 /* Russian Trusted Root CA.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Russian Trusted Root CA.der"; path = "../../../../../../Downloads/Russian Trusted Root CA.der"; sourceTree = "<group>"; };
 		CE7891C42ACEEE6E00ABE47B /* FLPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLPlugin.swift; sourceTree = "<group>"; };
 		CE7891C62ACEEE9800ABE47B /* FLNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLNativeView.swift; sourceTree = "<group>"; };
+		CE8C913A2ACF05CC00935B2C /* Russian Trusted Sub CA.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Russian Trusted Sub CA.der"; sourceTree = "<group>"; };
+		CE8C913B2ACF05CC00935B2C /* Russian Trusted Root CA.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Russian Trusted Root CA.der"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +139,8 @@
 		CE35570C2ACEF90200FB9942 /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
-				CE35570E2ACEF90C00FB9942 /* Russian Trusted Root CA.der */,
+				CE8C913B2ACF05CC00935B2C /* Russian Trusted Root CA.der */,
+				CE8C913A2ACF05CC00935B2C /* Russian Trusted Sub CA.der */,
 			);
 			path = Certificates;
 			sourceTree = "<group>";
@@ -229,6 +236,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8C913C2ACF05DD00935B2C /* Russian Trusted Root CA.der in Resources */,
+				CE8C913D2ACF05DD00935B2C /* Russian Trusted Sub CA.der in Resources */,
+				CE3557102ACF02D800FB9942 /* Debug.xcconfig in Resources */,
+				CE3557112ACF02D800FB9942 /* Release.xcconfig in Resources */,
+				CE3557122ACF02D800FB9942 /* Generated.xcconfig in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
