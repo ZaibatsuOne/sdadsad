@@ -9,12 +9,23 @@ actor CertificateValidator {
     }
 
     private func certificate(name: String) -> SecCertificate? {
-        let path = Bundle.main.url(forResource: name, withExtension: "der")
-        let certData = try! Data(contentsOf: path!)
-        
-        let certificate = SecCertificateCreateWithData(nil, certData as CFData)!
-        return certificate
+        if let path = Bundle.main.url(forResource: name, withExtension: "der"),
+           let certData = try? Data(contentsOf: path),
+           let certificate = SecCertificateCreateWithData(nil, certData as CFData) {
+            print("Certificate \(name) was loaded ")
+            return certificate
+        } else {
+            if let bundlePath = Bundle.main.path(forResource: name, ofType: "der", inDirectory: "Certificates") {
+                let certData = try? Data(contentsOf: URL(fileURLWithPath: bundlePath))
+                if let certificate = SecCertificateCreateWithData(nil, certData as! CFData) {
+                    return certificate
+                }
+            }
+            print("Failed to load certificate \(name)")
+            return nil
+        }
     }
+
     
     func isCertificatesValid(at date: Date) -> Bool {
         for certificate in certificates {
